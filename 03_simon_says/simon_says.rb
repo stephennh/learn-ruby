@@ -1,10 +1,10 @@
 def echo(word)
-  word
+  word.to_s
 end
 
 def shout(word)
   shout_word = word.upcase
-  return shout_word
+  shout_word.to_s
 end
 
 def repeat(word, num_words)
