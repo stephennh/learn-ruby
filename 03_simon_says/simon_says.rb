@@ -14,7 +14,7 @@ def repeat(word, num = 2)
 end
 
 def start_of_word(word, up_to)
-  new_word = word.slice!(0..up_to - 1)
+  new_word = word.slice(0..up_to - 1)
   return new_word
 end
 
@@ -26,8 +26,8 @@ end
 def titleize(str)
   lower_case = ["a", "the", "over", "and", "of", "in"]
   title = str.split
-  title.each do |word|
-    if title.include?(lower_case) && index != 0
+  title.each_with_index do |word, index|
+    if !lower_case.include?(word) || index == 0
       word.capitalize!
     end
   end
