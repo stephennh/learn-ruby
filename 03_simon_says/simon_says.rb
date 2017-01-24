@@ -9,15 +9,16 @@ end
 
 def repeat(word, num_words)
   total_word = word * num_words
-  return total_word
+  total_word
 end
 
-def start_of_word
+def start_of_word(word, up_to)
 
 end
 
-def first_word
-
+def first_word(str)
+  word = str.split
+  word[0]
 end
 
 def titleize
